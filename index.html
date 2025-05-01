@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condilhas - Transforme Seu Apartamento Ocioso em Renda Passiva no IDC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero-section">
+        <!-- Background image removed from CSS -->
+        <div class="container">
+            <h1>Transforme Seu Apartamento Ocioso em Renda Passiva!</h1>
+            <p>Com a Condilhas, gerenciamos tudo no Condomínio Resort Ilhas do Caribe: anúncios otimizados no Airbnb, limpeza e manutenção local — sem custos iniciais para você.</p>
+            <a href="#contact" class="cta-button">Fale Comigo</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="problem" class="problem-section">
+            <div class="container">
+                <h2>Seu Apartamento Está Custando Mais do Que Deveria?</h2>
+                <p>No Condomínio Resort Ilhas do Caribe, mais de 200 proprietários enfrentam o mesmo desafio: apartamentos vazios gerando altos custos com impostos, condomínio e manutenção, mas hesitam em alugar por preocupações com segurança e falta de experiência no Airbnb.</p>
+                <!-- Image removed, replaced with divider -->
+                <hr class="divider">
+            </div>
+        </section>
+
+        <section id="solution" class="solution-section">
+            <div class="container">
+                <h2>Condilhas: Gestão Completa e Sem Estresse</h2>
+                <p>Nós cuidamos de tudo: criamos anúncios de alta conversão para turistas internacionais, coordenamos limpeza e manutenção com equipes locais confiáveis, e garantimos a segurança do seu imóvel — tudo isso sem custos iniciais.</p>
+                <!-- Image removed, replaced with divider -->
+                <hr class="divider">
+            </div>
+        </section>
+
+        <section id="benefits" class="benefits-section">
+            <div class="container">
+                <h2>Renda Passiva Sem Complicações</h2>
+                 <p>Com a Condilhas, seu apartamento ocioso vira um ativo rentável, aumentando a ocupação e a renda de aluguel sem estresse. Imagine sua unidade trabalhando por você!</p>
+               <ul>
+                    <li>Gestão completa de aluguéis digitais.</li>
+                    <li>Anúncios otimizados para Airbnb.</li>
+                    <li>Limpeza e manutenção coordenadas.</li>
+                    <li>Sem custos iniciais.</li>
+                    <li>Segurança e cuidado garantidos.</li>
+                </ul>
+                <!-- No image was here -->
+            </div>
+        </section>
+
+        <section id="who-we-are" class="who-we-are-section">
+            <div class="container">
+                <h2>Conexão Local, Resultados Globais</h2>
+                <p>Sou residente do IDC há 5 anos, falo três idiomas e trabalho com geração de conteúdo e inteligência artificial. Minha família tem unidades no resort há mais de 20 anos. Com essa integração única à comunidade, conecto proprietários ausentes a inquilinos confiáveis.</p>
+                <!-- Image removed, replaced with divider -->
+                <hr class="divider">
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Comece a Ganhar Renda Passiva Hoje!</h2>
+            <form id="lead-form" name="contact" method="POST" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdstv2UlmM0Mtev1h3Z9rSB9NNl4jdYslOizNU_PjDCEAxGog/formResponse">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="entry.1753420716" placeholder="Nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="entry.1519378512" placeholder="E-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="entry.503689433" placeholder="Telefone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem (opcional):</label>
+                    <textarea id="message" name="entry.1487999532" placeholder="Mensagem (opcional)" rows="4"></textarea>
+                </div>
+                <button type="submit" class="cta-button form-submit-button">Quero Saber Mais</button>
+            </form>
+                <p class="privacy-note">Seus dados estão seguros conosco.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-section">
+        <div class="container">
+            <p>Contato: [Seu E-mail ou WhatsApp Aqui - Opcional]</p>
+            <p>&copy; 2025 Condilhas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for background form submission and redirect -->
+    <script>
+        const form = document.getElementById("lead-form");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const formData = new FormData(form);
+            const url = form.action;
+
+            // Submit data to Google Forms in the background
+            fetch(url, {
+                method: "POST",
+                body: formData,
+                mode: "no-cors" // Important for Google Forms
+            }).then(() => {
+                // Redirect to thank you page immediately after initiating the request
+                window.location.href = "thank-you.html";
+            }).catch(error => {
+                console.error("Error submitting form:", error);
+                // Optionally handle error, maybe redirect anyway or show an error message
+                window.location.href = "thank-you.html"; // Redirect even if fetch fails
+            });
+        });
+    </script>
+
+</body>
+</html>

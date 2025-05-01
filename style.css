@@ -1,0 +1,292 @@
+/* Reset & Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif; /* Clean sans-serif for body */
+    line-height: 1.8;
+    color: #333333; /* Dark grey text */
+    background-color: #e6e6e6; /* Updated background color */
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* Elegant serif for headings */
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    color: #333333; /* Dark grey headings */
+    font-weight: 700;
+    text-align: center; /* Center align headings */
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    text-align: center; /* Center align paragraphs */
+    max-width: 700px; /* Limit paragraph width for readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #555555; /* Slightly lighter grey for links */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #000000;
+}
+
+/* img removed, styles related to specific images might be removed later */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 30px;
+    overflow: hidden;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+/* Hero Section - Background image removed */
+.hero-section {
+    /* background: url('ilhas4.png') no-repeat center center/cover; */ /* Removed */
+    background-color: #e6e6e6; /* Ensure background color */
+    color: #333333;
+    padding: 8rem 0;
+    text-align: center;
+    min-height: auto; /* Adjusted height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Removed hero overlay */
+/* .hero-section::before { ... } */
+
+.hero-section .container {
+    /* background-color: rgba(248, 248, 244, 0.85); */ /* Removed background */
+    padding: 3rem;
+    border-radius: 5px;
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    color: #333333;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: transparent;
+    color: #333333;
+    border: 2px solid #333333;
+    padding: 0.8rem 2rem;
+    border-radius: 2px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0.5rem;
+}
+
+.cta-button:hover {
+    background: #333333;
+    color: #ffffff; /* White text on hover */
+}
+
+/* Content Sections */
+.problem-section,
+.solution-section,
+.benefits-section,
+.who-we-are-section,
+.contact-section {
+    background: #e6e6e6; /* Consistent updated background */
+}
+
+/* Style for images within sections - Removed */
+/* .section-image { ... } */
+
+/* Style for the new horizontal dividers */
+.divider {
+    border: none;
+    height: 3px;
+    background-color: #000000; /* Black */
+    margin: 3rem auto; /* Spacing around divider */
+    width: 80%; /* Adjust width as needed */
+    max-width: 800px; /* Max width */
+}
+
+.benefits-section ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: left;
+}
+
+.benefits-section li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.benefits-section li::before {
+    content: '\2013'; /* Em dash */
+    color: #555555;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Contact Section */
+.contact-section h2 {
+    margin-bottom: 3rem;
+}
+
+.privacy-note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 2rem;
+}
+
+/* Footer - Updated background and text color */
+.footer-section {
+    background: #e6e6e6; /* Updated background */
+    color: #333333; /* Updated text color */
+    text-align: center;
+    padding: 2.5rem 0;
+    margin-top: 4rem;
+}
+
+.footer-section p {
+    margin: 0.5rem 0;
+    color: #333333; /* Updated text color */
+    max-width: none;
+}
+
+.footer-section a {
+    color: #333333; /* Updated link color */
+}
+
+.footer-section a:hover {
+    color: #000000;
+}
+
+/* Form Styling */
+#lead-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: none;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    background-color: #ffffff; /* White input background */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999999;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-submit-button {
+    display: block;
+    width: auto;
+    margin: 2rem auto 0 auto;
+    background: #333333;
+    color: #ffffff; /* White text */
+    border-color: #333333;
+}
+
+.form-submit-button:hover {
+    background: #555555;
+    border-color: #555555;
+    color: #ffffff;
+}
+
+/* Hidden Honeypot */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    section {
+        padding: 3rem 0;
+    }
+    .hero-section {
+        padding: 5rem 0;
+        /* min-height: 50vh; */ /* Removed min-height */
+    }
+    .hero-section .container {
+        padding: 2rem;
+    }
+    .cta-button {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    /* .section-image removed */
+    .divider {
+        width: 90%;
+        margin: 2rem auto;
+    }
+}
+
